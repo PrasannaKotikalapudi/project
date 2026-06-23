@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Internship Project Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f7fc;
+    color:#333;
+}
+
+/* Navbar */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(0,0,0,0.85);
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    z-index:1000;
+}
+
+.logo{
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#00d4ff;
+}
+
+/* Hero Section */
+.hero{
+    height:100vh;
+    background:linear-gradient(135deg,#0f172a,#2563eb,#7c3aed);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    background:white;
+    color:#2563eb;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.08);
+}
+
+/* Sections */
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+    color:#0f172a;
+}
+
+.about{
+    text-align:center;
+}
+
+.about p{
+    max-width:900px;
+    margin:auto;
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* Cards */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#2563eb;
+}
+
+/* Team */
+.team{
+    background:#eef3ff;
+}
+
+.member{
+    text-align:center;
+}
+
+.member img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+/* Contact */
+.contact-box{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+.contact-box p{
+    margin:12px 0;
+    font-size:18px;
+}
+
+/* Footer */
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Animation */
+.hidden{
+    opacity:0;
+    transform:translateY(50px);
+    transition:all 1s;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+.hero h1{
+    font-size:38px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+nav{
+    flex-direction:column;
+    gap:10px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Internship Project</div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HOME -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Internship Project Showcase</h1>
+
+        <p>
+            Innovative Ideas 
+        </p>
+
+        <a href="#projects" class="btn">Explore Project</a>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about hidden">
+    <h2 class="section-title">About Our Project</h2>
+
+    <p>
+        Replace this text with your internship details, project objectives,
+        company information, technologies used, achievements, and learning
+        outcomes. This section can explain the complete purpose of your work.
+    </p>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+
+    <h2 class="section-title hidden">Project Highlights</h2>
+
+    <div class="grid">
+
+        <div class="card hidden">
+            <h3>Project Overview</h3>
+            <p>
+                Add a detailed description of your project here.
+            </p>
+        </div>
+
+        <div class="card hidden">
+            <h3>Technologies Used</h3>
+            <p>
+                HTML, CSS, JavaScript, React, Python, AI, Cloud, etc.
+            </p>
+        </div>
+
+        <div class="card hidden">
+            <h3>Key Features</h3>
+            <p>
+                Explain major functionalities and features.
+            </p>
+        </div>
+
+        <div class="card hidden">
+            <h3>Achievements</h3>
+            <p>
+                Mention milestones and project success.
+            </p>
+        </div>
+
+        <div class="card hidden">
+            <h3>Future Scope</h3>
+            <p>
+                Describe future enhancements and upgrades.
+            </p>
+        </div>
+
+        <div class="card hidden">
+            <h3>Results</h3>
+            <p>
+                Include outcomes, analytics and benefits.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- TEAM -->
+<section id="team" class="team">
+
+    <h2 class="section-title hidden">Our Team</h2>
+
+    <div class="grid">
+
+        <div class="card member hidden">
+            <img src="https://via.placeholder.com/120" alt="">
+            <h3>Your Name</h3>
+            <p>Team Lead</p>
+        </div>
+
+        <div class="card member hidden">
+            <img src="https://via.placeholder.com/120" alt="">
+            <h3>Member 2</h3>
+            <p>Developer</p>
+        </div>
+
+        <div class="card member hidden">
+            <img src="https://via.placeholder.com/120" alt="">
+            <h3>Member 3</h3>
+            <p>Designer</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+
+    <h2 class="section-title hidden">Contact Information</h2>
+
+    <div class="contact-box hidden">
+
+        <p><strong>Name:</strong> Your Name</p>
+
+        <p><strong>College:</strong> Your College Name</p>
+
+        <p><strong>Internship Company:</strong> Company Name</p>
+
+        <p><strong>Email:</strong> yourmail@example.com</p>
+
+        <p><strong>Phone:</strong> +91 XXXXX XXXXX</p>
+
+        <p><strong>Project Guide:</strong> Guide Name</p>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Internship Project Portfolio | Designed by Your Team</p>
+</footer>
+
+<script>
+const hiddenElements = document.querySelectorAll('.hidden');
+
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+hiddenElements.forEach((el)=>{
+    observer.observe(el);
+});
+
+// Dynamic title effect
+const titles = [
+    "Internship Project Showcase",
+    "Professional Portfolio",
+    "Innovation & Technology"
+];
+
+let i = 0;
+
+setInterval(()=>{
+    document.title = titles[i];
+    i = (i + 1) % titles.length;
+},2000);
+</script>
+
+</body>
+</html>
